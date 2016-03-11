@@ -1,0 +1,60 @@
+.mainBackground
+{
+	background-color: grey;
+	//height: 100%;
+	//width: 100%;
+	margin: auto; 
+	padding: 10px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	display: table;
+}
+
+.canvasBackground
+{
+	background-color: white;
+}
+
+.button 
+{
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+	width: 100px;
+    height: 50px;
+}
+
+.centerise 
+{
+    text-align: center;
+}
+
+.canvasAround
+{
+	width: 100%
+	height: auto;
+	overflow: hidden;
+	display: block;
+}
+
+#leftPart, #rightPart
+{
+	float: left;
+	background: white;
+	top: 50%;
+	display: table-cell;
+	vertical-align:middle;
+}
+
+#midPart
+{
+	float: left;
+}
+
+#message
+{
+	background: white;
+}

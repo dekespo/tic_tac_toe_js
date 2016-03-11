@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> TIC-TAC-TOE </title>
+		<link rel="stylesheet" href="style.css"/>
+		<script type="text/javascript" src="javascript/main.js"></script>
+		<script type="text/javascript" src="javascript/AI.js"></script>
+		<script type="text/javascript" src="javascript/draws.js"></script>
+		<script type="text/javascript" src="javascript/mouse.js"></script>
+		<script type="text/javascript" src="javascript/OO.js"></script>
+		<script type="text/javascript" src="javascript/options.js"></script>
+		<script type="text/javascript" src="javascript/others.js"></script>
+		<script type="text/javascript" src="javascript/window.js"></script>
+	</head>
+	<body class="mainBackground">
+		<div id="leftPart">
+			<input type="radio" name="left" id="player" checked onclick="changePlayer1()">Player<br>
+			<input type="radio" name="left" id="AI" onclick="changePlayer1()">Computer<br>
+		</div>
+		<div id="midPart">
+			<div class="canvasAround centerise">
+				<canvas class="centerise canvasBackground" id="canvas">
+					your browser doesn't support canvas!
+				</canvas>
+				<script> main() </script> 
+				<div class="centerise">
+					<select id="selectLevel" onchange="selectOption()">
+						<option value="1">Easy</option>
+						<option value="3" selected="selected">Medium</option>
+						<option value="5">Hard</option>
+						<option value="7">Impossible</option>
+					</select>
+					<input class="button" type="button" value= "RESTART" onclick="restartButton()"></input>
+					<p id="message"> Hi, I am AI! </p>
+				</div>
+			</div>
+		</div>
+		<div id="rightPart">
+			<input type="radio" name="right" id="player" onclick="changePlayer2()">Player<br>
+			<input type="radio" name="right" id="AI" checked onclick="changePlayer2()">Computer<br>
+		</div>
+	</body>
+</html>
