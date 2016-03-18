@@ -7,13 +7,16 @@ function AIplayer(level)
 	// Define game class
 	function game(level)
 	{
-		function getScore(playerID, depthLevel)
+		function getScore(playerID, depthLevel, status)
 		{
 			var score = 0;
-			if(playerID == 'X')
-				score = depthLevel - 10;
-			else
-				score = 10 - depthLevel;
+			if(status)
+			{
+				if(playerID == 'X')
+					score = depthLevel - 10;
+				else
+					score = 10 - depthLevel;
+			}
 			return score;
 		}
 
@@ -28,7 +31,7 @@ function AIplayer(level)
 			var chosenBoardScore;
 			for(var i = 0; i < BOXNO * BOXNO; i++)
 			{
-				var copy = board.slice(0); // copying properly
+				var copy = board.slice(0); // deep copy
 				if(copy[i] == undefined)
 				{
 					copy[i] = new XorO(i % BOXNO * GRID.x[1], Math.floor(i / BOXNO) * GRID.y[1], playerID);
@@ -74,7 +77,7 @@ function AIplayer(level)
 			var gameStatus = checkWinner(board, false);
 			if(localTurn === BOXNO * BOXNO || gameStatus.result || level == depthLevel)
 			{
-				boardScore.score = getScore(playerID, depthLevel);
+				boardScore.score = getScore(playerID, depthLevel, gameStatus.result);
 				return boardScore;
 			}
 
