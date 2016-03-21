@@ -14,6 +14,11 @@ function main()
 
 	CANVAS.addEventListener('mousedown', function(evt) {
 		var mousePos = getMousePos(CANVAS, evt);
+		var val = checkBox(mousePos);
+		//if(val.placeable && (PLAYER1 || PLAYER2))
+		//{
+		//	humanPlayer(mousePos);
+		//}
 		if(PLAYER1) humanPlayer(mousePos);
 		else AIplayer(AI_LEVEL); 
 		if(PLAYER2) humanPlayer(mousePos);

@@ -3,10 +3,16 @@
 	background-color: grey;
 	//height: 100%;
 	//width: 100%;
-	margin: auto; 
 	padding: 10px;
 	overflow-y: hidden;
 	overflow-x: hidden;
+}
+
+#allElements
+{
+	background-color: #66ff99;
+	height: 500px;
+	margin: auto; 
 	display: table;
 }
 
@@ -27,6 +33,11 @@
     height: 50px;
 }
 
+.radio
+{
+	background: white;
+}
+
 .centerise 
 {
     text-align: center;
@@ -43,18 +54,21 @@
 #leftPart, #rightPart
 {
 	float: left;
-	background: white;
-	top: 50%;
+	padding-top: 225px;
+	padding-right: 20px;
+	padding-left: 20px;
 	display: table-cell;
-	vertical-align:middle;
 }
 
 #midPart
 {
 	float: left;
+	display: table-cell;
 }
 
 #message
 {
-	background: white;
+	background: black;
+    color: red;
+	font-weight: bold;
 }

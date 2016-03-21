@@ -53,8 +53,8 @@ function humanPlayer(pos)
 			initialize();
 		}
 	}
-	else
-	{
-		humanPlayer(pos); // Will reach maximum stack
-	}
+	//else
+	//{
+	//	humanPlayer(pos); // Will reach maximum stack
+	//}
 }

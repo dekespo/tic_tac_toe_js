@@ -112,7 +112,7 @@ function AIplayer(level)
 			}
 		}
 
-		document.getElementById("message").innerHTML = "Now it's your turn...";
+		document.getElementById("message").innerHTML = "Now it's your <br>turn...";
 	}
 
 	setTimeout(function(){

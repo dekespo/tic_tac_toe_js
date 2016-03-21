@@ -19,19 +19,20 @@ function addRadios()
 	var leftRadioButton = document.getElementById("left");
 	var rightRadioButton = document.getElementById("right");
 
-	console.log("leftRadioButton", leftRadioButton);
-	leftRadioButton.onclick = changePlayer; 
-
+	leftRadioButton.onclick = changePlayer1; 
+	rightRadioButton.onclick = changePlayer2; 
 }
 
 function changePlayer1()
 {
+	console.log("PLAYER1 = ", PLAYER1);
 	PLAYER1 = !PLAYER1;
 	if(!PLAYER1) AIplayer(AI_LEVEL);
 }
 
 function changePlayer2()
 {
+	console.log("PLAYER2 = ", PLAYER2);
 	PLAYER2 = !PLAYER2;
 	if(!PLAYER2) AIplayer(AI_LEVEL);
 }
